@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        .lead {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 6px;
-            padding-right: 6px;
-            marging-top: 10px;
-            background-color: #f6f6f6;
-            width: 100%;
-        }
-    </style>
-</head>
+{% extends "base.html" %}
 
-<body>
+{% block content %}
     <a href="/leads/create/">Create a new lead</a>
     <hr />
     <h1>This is all of our leads</h1>
@@ -25,5 +9,4 @@
             <a href="{% url 'leads:lead-detail' lead.pk %}">{{ lead }}</a>
         </div>
     {% endfor %}
-</body>
-</html>
+{% endblock content %}
